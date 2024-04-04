@@ -1,6 +1,10 @@
 .grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 10px 40px;
+	grid-gap: 60px;
 	grid-auto-rows: minmax(100px, auto);
+	@media(min-width: 1280px) {
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 40px;
+	}
 }

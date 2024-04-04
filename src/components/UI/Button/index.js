@@ -1,7 +1,7 @@
 import styles from "./index.module.css";
-const Index = ({handleClick, text}) => {
+const Index = ({handleClick, text, color}) => {
     return (
-        <button className={styles.btn} onClick={handleClick}>
+        <button className={`btn btn__${color}`} onClick={handleClick}>
             {text}
         </button>
     );

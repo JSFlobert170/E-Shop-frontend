@@ -1,8 +1,9 @@
 export const GET_ARTICLES = `
-    query {
-        getArticles {
+    query getArticles($filters: FiltersInput) {
+        getArticles (filters: $filters){
             id,
-            title
+            title,
+            date
         }
     },
 `
