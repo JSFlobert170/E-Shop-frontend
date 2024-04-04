@@ -1,0 +1,33 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.wrapper {
+    overflow: hidden;
+    border-radius: 200px;
+    width: 300px;
+    margin: 50px auto;
+}
+
+.slider {
+    display: flex;
+    position: relative;
+    width: 100%;
+    transition: 0.3s all;
+}
+
+.slide {
+    width: 500px;
+    height: 500px;
+    background: lightgray;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    // width: 24%;
+}
+

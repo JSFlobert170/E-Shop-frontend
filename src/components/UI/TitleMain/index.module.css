@@ -1,0 +1,10 @@
+.wrapper {
+    margin: 20px 0px;
+    font-size: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    &.white {
+        color: white;
+    }
+}

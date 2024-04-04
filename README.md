@@ -1,0 +1,6 @@
+- utiliser le service fetchGraphql sur la home
+- Utiliser le fetchGraphql sur l'affichage d'un article -> blog -> [id] -> page.js
+- Si le registerUser est prêt en back end => appliquer sur la home 
+    -> Créer une page register 
+    -> Implémenter un formulaire (composants Button, Input, Form etc...)
+    -> Récupérer le token

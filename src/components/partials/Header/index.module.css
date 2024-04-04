@@ -1,0 +1,28 @@
+.header__main {
+    background-color: #A9A9A9;
+    /* margin: 62px; */
+    /* max-width: 1280px; */
+    /* padding: 20px ; */
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__main .logo {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: var(--color-primary);
+}
+
+.header__main a{
+    text-decoration: none;
+}
+
+.right__part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
