@@ -1,14 +1,13 @@
-import TitlePage from "@/components/UI/TitlePage";
-import GridPosts from "@/components/UI/GridPosts";
 import { GET_ARTICLES } from "@/graphql/queries";
 import Hero from "@/components/UI/Hero";
 import Slider from "@/components/UI/Slider";
+import TitleMain from "@/components/UI/TitleMain";
 import BackgroundHero from "../../public/background_hero.jpg";
-import styles from "./page.module.scss";
+import Image from "../../public/background_hero.jpg";
+import styles from "./index.module.scss";
 export default async function Home() {
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}/articles`, {
-    // const res = await fetch(`http://localhost:3030/api/articles`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}/graphql`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -18,8 +17,12 @@ export default async function Home() {
 
   const articles = await res.json();
 
+  console.log(Image);
+
+  const images = [Image.src, Image.src, Image.src,  Image.src]
+
   return (
-    <div style={{height: "3000px"}}>
+    <>
       <Hero
         subtitle="We talk about"
         title="Cloud computing"
@@ -27,19 +30,27 @@ export default async function Home() {
         buttonLink="/"
         buttonText="Discover"
       />
-      <div className={styles.main_part}>
-        <div className={styles.left_part}>
-        <h1>test</h1>
-            <p>qefrbgqihrbgqsrbgfjuqshjfsvbJLFVQSJFVJQSHVFJVSJFHVSJehfvjehvfjqehf jefrhgjzefrugfgfegfegqffeqfuefueyfueyfyegyegfyegzyfgzeyfgeyfuyfveuFVELZFZEFVUYEZVLU</p>
-        </div>
-        <div className={styles.right_part}>
-          <Slider/>
-        </div>
+      <div className="container">
+        <section className={styles.about__wrapper}>
+          <div className={styles.left__part}>
+            <TitleMain
+              withUnderline={true}
+              title="Discover the best blog ever" color="primary"
+            />
+            <a className="btn btn__primary" href="#">About us</a>
+          </div>
+          <div className={styles.right__part}>
+            <Slider
+              images={images}
+              width={330}
+            />
+          </div>
+        </section>
+        {/* {
+          articles && <GridPosts articles={articles.data.getArticles} />
+        } */}
+
       </div>
-      
-      {/* {
-        articles && <GridPosts articles={articles.data.getArticles} />
-      } */}
-    </div>
+    </>
   )
 }

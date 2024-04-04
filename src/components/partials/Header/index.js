@@ -1,21 +1,37 @@
 "use client";
-import Link from "next/link";
+import {useEffect, useState} from "react";
 import SearchInput from '@/components/UI/SearchInput';
-// import styles from "./index.module.css";
+import Logo from "@/components/UI/Logo";
 import styles from "./index.module.scss";
 
 const Index = () => {
+
+    const [isFixed, setIsFixed] = useState(false);
+
+    useEffect(() => { 
+        window.addEventListener("scroll", (e) => {
+
+            if (window.scrollY > 150) {
+                setIsFixed(true);
+                // document.querySelector("header").classList.add(styles.fixed);
+            }
+            else {
+                setIsFixed(false);
+                // document.querySelector("header").classList.remove(styles.fixed);
+            }
+        });
+    }, []);
+
     return (
         <>
-        <header className={styles.header__main}>
-            <div className={styles.header__left}>
-                <SearchInput />
-            </div>
-            <div className={styles.header__center}>
-                <h1>M.W.A</h1>
-            </div>
-            
-            <div className={styles.header__right}>
+        <header className={`${styles.header__main} ${isFixed ? styles.fixed : ""}`}>
+                <div className={styles.header__left}>
+                    <SearchInput/>
+                </div>
+                <div className={styles.header__center}>
+                    <Logo/>
+                </div>
+                <div className={styles.header__right}>
                     <div className={styles.header__social}>
                         <ul className={styles.social__wrapper}>
                             <li className={styles.social__item}>
@@ -35,8 +51,7 @@ const Index = () => {
                         </ul>
                     </div>
                 </div>
-            
-            </header>
+        </header>
         </>
     );
 }

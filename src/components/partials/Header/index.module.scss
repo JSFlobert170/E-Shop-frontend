@@ -9,7 +9,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            z-index: 100;
+            z-index: 99999;
             background-color: white;
             width: 100%;
             transition: all 0.3s ease-in-out;
@@ -17,17 +17,17 @@
     }
 
     &__left {
-        width: auto;
+        width: 33.33%;
     }
 
     &__right {
-        width: auto;
+        width: 33.33%;
         display: flex;
         justify-content: flex-end;
     }
 
     &__center {
-        width: auto;
+        width: 33.33%;
         text-align: center;
     }
     &__social {

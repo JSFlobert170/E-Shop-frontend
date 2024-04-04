@@ -1,43 +1,9 @@
-body{
-    // font-family: var(--secondary-font);
-    background: rgba(206, 204, 204, 0.15);
-    // margin-left:10%;
-    // margin-right:10%;
-    // max-width: auto;
-    // max-height: auto;
+body {
+    font-family: var(--secondary-font);
+    background-color: var(--fifth-color);
+}
 
-    
-}
-header {
-    // padding: 60px;
-    text-align: center;
-    background: rgba(206, 204, 204, 0.15);
-    // color: white;
-    // font-size: 30px;
-}
-footer {
-    // padding: 60px;
-    text-align: center;
-    background: rgba(206, 204, 204, 0.15);
-    color: white;
-    font-size: 30px;
-  }
-h1, h2{
-
-}
 p {
-    padding: 3px;
-    color: blue;
-    font-size: 12px;
-    text-decoration: none;
-  }
-div{
-    // max-width: auto;
-    // max-height: auto;
-    // padding-top:1%;
-    // padding-bottom:3%;
-    // padding-left:10%;
-    // padding-right:10%;
-    // background-color: rgba(206, 204, 204, 0.15);
-    // background-color: #6A6767;
+    font-size: 16px;
+    margin-bottom: 15px;
 }
